@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KATTIBLISS｜第一批體驗申請</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans TC', sans-serif; background: #faf9f7; color: #1a1a1a; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 3rem 1.5rem; }
+  .wrap { width: 100%; max-width: 520px; }
+  .header { text-align: center; margin-bottom: 3rem; }
+  .brand { font-family: 'Noto Serif TC', serif; font-size: 11px; font-weight: 300; letter-spacing: 0.35em; color: #999; margin-bottom: 1rem; }
+  .title { font-family: 'Noto Serif TC', serif; font-size: 24px; font-weight: 400; color: #1a1a1a; line-height: 1.6; margin-bottom: 1rem; }
+  .divider { width: 32px; height: 1px; background: #ddd; margin: 1.25rem auto; }
+  .desc { font-size: 14px; color: #666; line-height: 1.9; font-weight: 300; }
+  .field { margin-bottom: 1.75rem; }
+  .field label { display: block; font-size: 12px; font-weight: 500; color: #888; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
+  .field input[type="text"], .field input[type="tel"] { width: 100%; padding: 11px 14px; font-size: 15px; font-family: 'Noto Sans TC', sans-serif; font-weight: 300; background: #fff; border: 1px solid #e8e6e1; border-radius: 8px; color: #1a1a1a; outline: none; transition: border-color 0.2s; }
+  .field input:focus { border-color: #aaa; }
+  .hint { font-size: 11px; color: #bbb; margin-top: 0.4rem; font-weight: 300; }
+  .radio-group { display: flex; flex-direction: column; gap: 10px; }
+  .radio-option { display: flex; align-items: flex-start; gap: 13px; padding: 15px 16px; background: #fff; border: 1px solid #e8e6e1; border-radius: 8px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+  .radio-option:hover { border-color: #ccc; background: #faf9f7; }
+  .radio-option.selected { border-color: #1a1a1a; background: #faf9f7; }
+  .radio-option input[type="radio"] { margin-top: 3px; flex-shrink: 0; accent-color: #1a1a1a; width: 15px; height: 15px; }
+  .radio-text { display: flex; flex-direction: column; gap: 3px; }
+  .radio-main { font-size: 14px; font-weight: 500; color: #1a1a1a; }
+  .radio-sub { font-size: 12px; color: #999; font-weight: 300; }
+  .submit-btn { width: 100%; padding: 15px; background: #1a1a1a; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-family: 'Noto Sans TC', sans-serif; font-weight: 500; letter-spacing: 0.12em; cursor: pointer; margin-top: 2.5rem; transition: opacity 0.2s; }
+  .submit-btn:hover { opacity: 0.8; }
+  .submit-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .error-msg { display: none; font-size: 13px; color: #c0392b; margin-top: 0.75rem; text-align: center; }
+  .success-wrap { display: none; text-align: center; padding: 3rem 2rem; background: #fff; border: 1px solid #e8e6e1; border-radius: 12px; }
+  .success-title { font-family: 'Noto Serif TC', serif; font-size: 20px; font-weight: 400; color: #1a1a1a; margin-bottom: 0.75rem; }
+  .success-sub { font-size: 13px; color: #888; font-weight: 300; line-height: 1.9; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="brand">KATTIBLISS</div>
+    <h1 class="title">澄鏡 · 澄靜<br>第一批體驗申請</h1>
+    <div class="divider"></div>
+    <p class="desc">這是品牌第一批體驗包，我想留給你們。<br>填完之後我會整理寄出，謝謝你願意成為第一個感受它的人。</p>
+  </div>
+
+  <div id="formArea">
+    <div class="field">
+      <label>你的名字／暱稱（我認識你的那個）</label>
+      <input type="text" id="name" placeholder="請輸入你的名字" autocomplete="off" />
+    </div>
+    <div class="field">
+      <label>手機號碼</label>
+      <input type="tel" id="phone" placeholder="0912-345-678" autocomplete="off" />
+      <p class="hint">用於全家店到店通知</p>
+    </div>
+    <div class="field">
+      <label>全家取件門市名稱及地址</label>
+      <input type="text" id="store" placeholder="例：全家台北信義門市，台北市信義區忠孝東路五段1號" autocomplete="off" />
+      <p class="hint">請填你方便取件的門市</p>
+    </div>
+    <div class="field">
+      <label>你想體驗哪一款？</label>
+      <div class="radio-group">
+        <label class="radio-option" id="opt1">
+          <input type="radio" name="choice" value="澄鏡 · Inner Light｜香水 5ml" onchange="pick('opt1')" />
+          <div class="radio-text">
+            <span class="radio-main">澄鏡 · Inner Light</span>
+            <span class="radio-sub">香水 5ml</span>
+          </div>
+        </label>
+        <label class="radio-option" id="opt2">
+          <input type="radio" name="choice" value="澄靜 · Hush｜睡眠噴霧 5ml" onchange="pick('opt2')" />
+          <div class="radio-text">
+            <span class="radio-main">澄靜 · Hush</span>
+            <span class="radio-sub">睡眠噴霧 5ml</span>
+          </div>
+        </label>
+        <label class="radio-option" id="opt3">
+          <input type="radio" name="choice" value="小孩才做選擇，大人兩種都要" onchange="pick('opt3')" />
+          <div class="radio-text">
+            <span class="radio-main">小孩才做選擇，大人兩種都要</span>
+            <span class="radio-sub">澄鏡 5ml ＋ 澄靜 5ml</span>
+          </div>
+        </label>
+      </div>
+    </div>
+    <p class="error-msg" id="errMsg">請填寫所有欄位並選擇體驗款式</p>
+    <button class="submit-btn" id="btn" onclick="send()">送出申請</button>
+  </div>
+
+  <div class="success-wrap" id="successWrap">
+    <div class="success-title">收到了 🌿</div>
+    <p class="success-sub">謝謝你，我會盡快整理寄出。<br>期待你用過之後告訴我的感受。</p>
+  </div>
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbykT-Gl1feA9CYD71GaMJto4Qwv88ZD6vG7whYmp5KggvSoPErzq0Ozi1LB9sCXMrimGw/exec';
+
+function pick(id) {
+  ['opt1','opt2','opt3'].forEach(o => document.getElementById(o).classList.remove('selected'));
+  document.getElementById(id).classList.add('selected');
+}
+
+async function send() {
+  const err = document.getElementById('errMsg');
+  err.style.display = 'none';
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const store = document.getElementById('store').value.trim();
+  const choice = document.querySelector('input[name="choice"]:checked');
+  if (!name || !phone || !store || !choice) {
+    err.style.display = 'block';
+    return;
+  }
+  const btn = document.getElementById('btn');
+  btn.disabled = true;
+  btn.textContent = '送出中...';
+  const payload = {
+    timestamp: new Date().toLocaleString('zh-TW', {timeZone: 'Asia/Taipei'}),
+    name, phone, store, choice: choice.value
+  };
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(payload)
+    });
+    document.getElementById('formArea').style.display = 'none';
+    document.getElementById('successWrap').style.display = 'block';
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = '送出申請';
+    err.textContent = '送出失敗，請稍後再試';
+    err.style.display = 'block';
+  }
+}
+</script>
+</body>
+</html>

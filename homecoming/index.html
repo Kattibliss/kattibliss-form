@@ -53,7 +53,7 @@
       <h2>報名資料</h2>
       <div class="field"><label>姓名<span class="req">＊</span></label><input id="name" type="text" autocomplete="name" required></div>
       <div class="field"><label>Email<span class="req">＊</span></label><input id="email" type="email" autocomplete="email" required><div class="hint">用於報名確認及課程相關通知。</div></div>
-      <div class="field"><label>手機<span class="req">＊</span></label><input id="phone" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label>手機<span class="req">＊</span></label><input id="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="例如 0912-345-678" required><div class="hint">請填寫 09 開頭的台灣手機號碼，共 10 碼。</div></div>
 
       <div class="field"><label>你是從哪裡知道《回家以後》的？<span class="req">＊</span></label>
         <select id="source" required><option value="">請選擇</option><option>Katti 個人 Facebook</option><option>kattibliss 氣味棲所</option><option>Instagram</option><option>朋友分享／介紹</option><option>曾參加過 Kattibliss 的活動</option><option>其他</option></select>
@@ -118,6 +118,14 @@ function checked(name){const x=document.querySelector(`input[name="${name}"]:che
 async function sendForm(){
   const f=document.getElementById('regForm'),err=document.getElementById('err');err.style.display='none';
   if(!f.reportValidity()) return;
+  const phoneInput=document.getElementById('phone');
+  const phone=phoneInput.value.replace(/[\s-]/g,'');
+  if(!/^09\d{8}$/.test(phone)){
+    err.textContent='請填寫有效的台灣手機號碼（09 開頭，共 10 碼）。';
+    err.style.display='block';
+    phoneInput.focus();
+    return;
+  }
   const invoice=checked('invoice'), sensitivity=checked('sensitivity');
   if(invoice==='需要' && (!document.getElementById('invoiceTitle').value.trim() || !document.getElementById('taxId').value.trim())){err.textContent='請填寫發票抬頭與統一編號。';err.style.display='block';return;}
   if(sensitivity==='有' && !document.getElementById('sensitivityNote').value.trim()){err.textContent='請簡單說明需要事先知道的氣味不適情況。';err.style.display='block';return;}
@@ -126,7 +134,7 @@ async function sendForm(){
     formType:'homecoming_20260918',
     name:document.getElementById('name').value.trim(),
     email:document.getElementById('email').value.trim(),
-    phone:document.getElementById('phone').value.trim(),
+    phone,
     source:document.getElementById('source').value,
     experience:checked('experience'),
     expectation:document.getElementById('expectation').value.trim(),

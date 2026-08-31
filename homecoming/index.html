@@ -13,98 +13,100 @@
   h2{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:500;margin:38px 0 16px}.pay{background:#f4f0eb}.pay strong{font-weight:500}.pay .account{font-size:16px;letter-spacing:.03em}
   .field{margin:0 0 24px}.field label{display:block;font-size:13px;font-weight:500;color:#5f5750;margin-bottom:8px}.req{color:#a46f63;margin-left:4px}.hint{font-size:12px;color:#9b928a;margin-top:5px}.field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid #ded8d2;border-radius:9px;background:#fff;font:inherit;font-size:15px;color:#2a2724;outline:none}.field textarea{min-height:105px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:#8f847b}
   .radio,.checks{display:flex;flex-direction:column;gap:10px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid #e4ded8;background:#fff;border-radius:9px;font-size:14px}.option input{width:auto;margin-top:6px}.rules{font-size:13px;color:#655e58}.rules p{margin:8px 0}.rules strong{font-weight:500;color:#403b37}
-  .submit{width:100%;border:0;border-radius:9px;background:#2f2b28;color:#fff;padding:15px;font:inherit;font-weight:500;letter-spacing:.08em;cursor:pointer;margin-top:28px}.submit:disabled{opacity:.45;cursor:not-allowed}.error{display:none;color:#a64c42;font-size:13px;text-align:center;margin-top:12px}.success{display:none;text-align:center;background:#fff;border:1px solid #ebe6e1;border-radius:14px;padding:44px 24px;margin-top:28px}.success h2{margin:0 0 12px;font-size:22px}.success p{color:#756d66;font-size:14px}
-  .conditional{display:none;margin-top:14px}@media(max-width:520px){.wrap{padding-top:32px}h1{font-size:25px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}}
+  .submit{width:100%;border:0;border-radius:9px;background:#2f2b28;color:#fff;padding:15px;font:inherit;font-weight:500;letter-spacing:.08em;cursor:pointer;margin-top:28px}.submit:disabled{opacity:.45;cursor:not-allowed}.error{display:none;color:#a64c42;font-size:13px;text-align:center;margin-top:12px}.success{display:none;text-align:center;background:#fff;border:1px solid #ebe6e1;border-radius:14px;padding:52px 24px;margin-top:12vh}.success h2{margin:0 0 12px;font-size:22px}.success p{color:#756d66;font-size:14px}
+  .conditional{display:none;margin-top:14px}@media(max-width:520px){.wrap{padding-top:32px}h1{font-size:25px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}.success{margin-top:8vh}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="brand">KATTIBLISS</div>
-  <h1>《回家以後》</h1>
-  <div class="subtitle">給自己的氣味體驗課</div>
-  <div class="line"></div>
+  <div id="preSubmit">
+    <div class="brand">KATTIBLISS</div>
+    <h1>《回家以後》</h1>
+    <div class="subtitle">給自己的氣味體驗課</div>
+    <div class="line"></div>
 
-  <div class="intro">
-    這不是一堂需要先懂香氣、記住香材名稱的課。<br><br>
-    我們會從現在的生活與感受開始，經過匿名聞香、選擇與創作，做出一瓶屬於現在的你的 <strong>50ml《回家香氣空間噴霧》</strong>。<br><br>
-    但《回家以後》不會在作品完成的那一刻結束。<br><br>
-    當你把它帶回生活，開始在某些時候想起它、使用它，這段體驗才會繼續發生。
-  </div>
-
-  <div class="card">
-    <div class="info-row"><b>日期</b><span>2026/09/18（五）</span></div>
-    <div class="info-row"><b>時間</b><span>14:30 開始，約 2.5 小時</span></div>
-    <div class="info-row"><b>地點</b><span>府中捷運站附近，完成報名後提供詳細地址</span></div>
-    <div class="info-row"><b>人數</b><span>最多 6 人｜3 人成班</span></div>
-    <div class="info-row"><b>費用</b><span>NT$2,480／人（含稅）</span></div>
-    <div class="info-row"><b>作品</b><span>50ml《回家香氣空間噴霧》一瓶</span></div>
-  </div>
-
-  <h2>報名方式</h2>
-  <div class="card pay">
-    <p>本場採 <strong>先完成付款，再填寫報名表</strong> 的方式保留席次。</p>
-    <p><strong>課程費用｜NT$2,480／人（含稅）</strong></p>
-    <p>銀行｜國泰世華銀行<br>銀行代碼｜013<br>戶名｜凱緹悦有限公司<br><span class="account">帳號｜140030000575</span></p>
-    <p class="hint">完成匯款後，請於下方填寫匯款帳號末五碼及日期，方便核對款項。</p>
-  </div>
-
-  <form id="regForm" onsubmit="return false;">
-    <h2>報名資料</h2>
-    <div class="field"><label>姓名<span class="req">＊</span></label><input id="name" type="text" autocomplete="name" required></div>
-    <div class="field"><label>Email<span class="req">＊</span></label><input id="email" type="email" autocomplete="email" required><div class="hint">用於報名確認及課程相關通知。</div></div>
-    <div class="field"><label>手機<span class="req">＊</span></label><input id="phone" type="tel" autocomplete="tel" required></div>
-
-    <div class="field"><label>你是從哪裡知道《回家以後》的？<span class="req">＊</span></label>
-      <select id="source" required><option value="">請選擇</option><option>Katti 個人 Facebook</option><option>kattibliss 氣味棲所</option><option>Instagram</option><option>朋友分享／介紹</option><option>曾參加過 Kattibliss 的活動</option><option>其他</option></select>
+    <div class="intro">
+      這不是一堂需要先懂香氣、記住香材名稱的課。<br><br>
+      我們會從現在的生活與感受開始，經過匿名聞香、選擇與創作，做出一瓶屬於現在的你的 <strong>50ml《回家香氣空間噴霧》</strong>。<br><br>
+      但《回家以後》不會在作品完成的那一刻結束。<br><br>
+      當你把它帶回生活，開始在某些時候想起它、使用它，這段體驗才會繼續發生。
     </div>
 
-    <div class="field"><label>過去有參加過調香或香氛體驗課嗎？<span class="req">＊</span></label>
-      <div class="radio"><label class="option"><input type="radio" name="experience" value="有" required>有</label><label class="option"><input type="radio" name="experience" value="沒有">沒有</label></div>
-      <div class="hint">有沒有經驗都不影響參加，《回家以後》不需要任何香氛基礎。</div>
+    <div class="card">
+      <div class="info-row"><b>日期</b><span>2026/09/18（五）</span></div>
+      <div class="info-row"><b>時間</b><span>14:30 開始，約 2.5 小時</span></div>
+      <div class="info-row"><b>地點</b><span>府中捷運站附近，完成報名後提供詳細地址</span></div>
+      <div class="info-row"><b>人數</b><span>最多 6 人｜3 人成班</span></div>
+      <div class="info-row"><b>費用</b><span>NT$2,480／人（含稅）</span></div>
+      <div class="info-row"><b>作品</b><span>50ml《回家香氣空間噴霧》一瓶</span></div>
     </div>
 
-    <div class="field"><label>這次來到《回家以後》，你最希望帶回的是什麼？</label><textarea id="expectation" placeholder="可以留白，或寫下此刻想到的。"></textarea></div>
-
-    <div class="field"><label>你是否有已知會因香氛、香精或氣味引起明顯不適的情況？<span class="req">＊</span></label>
-      <div class="radio"><label class="option"><input type="radio" name="sensitivity" value="沒有" required onchange="toggleSensitivity(false)">沒有</label><label class="option"><input type="radio" name="sensitivity" value="有" onchange="toggleSensitivity(true)">有</label></div>
-      <div id="sensitivityBox" class="conditional"><textarea id="sensitivityNote" placeholder="請簡單說明我們需要事先知道的情況。"></textarea></div>
+    <h2>報名方式</h2>
+    <div class="card pay">
+      <p>本場採 <strong>先完成付款，再填寫報名表</strong> 的方式保留席次。</p>
+      <p><strong>課程費用｜NT$2,480／人（含稅）</strong></p>
+      <p>銀行｜國泰世華銀行<br>銀行代碼｜013<br>戶名｜凱緹悦有限公司<br><span class="account">帳號｜140030000575</span></p>
+      <p class="hint">完成匯款後，請於下方填寫匯款帳號末五碼及日期，方便核對款項。</p>
     </div>
 
-    <h2>匯款資訊</h2>
-    <div class="field"><label>匯款帳號末五碼<span class="req">＊</span></label><input id="last5" type="text" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="請輸入 5 碼" required></div>
-    <div class="field"><label>匯款日期<span class="req">＊</span></label><input id="payDate" type="date" required></div>
+    <form id="regForm" onsubmit="return false;">
+      <h2>報名資料</h2>
+      <div class="field"><label>姓名<span class="req">＊</span></label><input id="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label>Email<span class="req">＊</span></label><input id="email" type="email" autocomplete="email" required><div class="hint">用於報名確認及課程相關通知。</div></div>
+      <div class="field"><label>手機<span class="req">＊</span></label><input id="phone" type="tel" autocomplete="tel" required></div>
 
-    <h2>發票資訊</h2>
-    <div class="field"><label>發票需要統一編號嗎？<span class="req">＊</span></label>
-      <div class="radio"><label class="option"><input type="radio" name="invoice" value="不需要" required onchange="toggleInvoice(false)">不需要，開立一般發票</label><label class="option"><input type="radio" name="invoice" value="需要" onchange="toggleInvoice(true)">需要</label></div>
-      <div id="invoiceBox" class="conditional">
-        <div class="field"><label>發票抬頭</label><input id="invoiceTitle" type="text"></div>
-        <div class="field"><label>統一編號</label><input id="taxId" type="text" inputmode="numeric" maxlength="8"></div>
+      <div class="field"><label>你是從哪裡知道《回家以後》的？<span class="req">＊</span></label>
+        <select id="source" required><option value="">請選擇</option><option>Katti 個人 Facebook</option><option>kattibliss 氣味棲所</option><option>Instagram</option><option>朋友分享／介紹</option><option>曾參加過 Kattibliss 的活動</option><option>其他</option></select>
       </div>
-    </div>
 
-    <h2>報名與取消規則</h2>
-    <div class="card rules">
-      <p><strong>報名成立</strong>｜請先完成付款，再送出本表單。Kattibliss 核對款項與資料後，會以 Email 寄出報名成功通知；收到確認信後，席次正式成立。</p>
-      <p><strong>名額</strong>｜本場限 6 人。若額滿前後出現多人同時付款，將依實際付款／入帳時間順序確認席次；未能保留席次者將全額退款。</p>
-      <p><strong>開課 7 日前取消</strong>｜可申請全額退款。</p>
-      <p><strong>開課前 3～6 日取消</strong>｜退還課程費用 50%。</p>
-      <p><strong>開課前 0～2 日取消或當日未到</strong>｜恕無法退款。</p>
-      <p><strong>名額轉讓</strong>｜若臨時無法參加，可於開課前主動聯繫，將名額轉讓給一位親友，不另收費。</p>
-      <p><strong>若課程取消</strong>｜若因不可抗力、場地因素或 Kattibliss 端原因取消，學員可選擇全額退款或保留至下一場次。</p>
-      <p><strong>開班</strong>｜3 人成班、6 人滿班。若未達最低開班人數，Kattibliss 將於課程前通知，並提供全額退款或保留至下一場次。</p>
-      <p><strong>時間</strong>｜課程 14:30 準時開始，建議提前 5～10 分鐘抵達。前段包含完整的感受整理與匿名聞香流程，遲到較久可能無法補回所有內容。</p>
-    </div>
+      <div class="field"><label>過去有參加過調香或香氛體驗課嗎？<span class="req">＊</span></label>
+        <div class="radio"><label class="option"><input type="radio" name="experience" value="有" required>有</label><label class="option"><input type="radio" name="experience" value="沒有">沒有</label></div>
+        <div class="hint">有沒有經驗都不影響參加，《回家以後》不需要任何香氛基礎。</div>
+      </div>
 
-    <div class="checks">
-      <label class="option"><input id="confirmDate" type="checkbox" required>我已確認可參加 2026/09/18（五）14:30 的課程。</label>
-      <label class="option"><input id="confirmRules" type="checkbox" required>我已閱讀並同意以上報名、取消、退款與名額轉讓規則。</label>
-      <label class="option"><input id="confirmPayment" type="checkbox" required>我已完成付款，並理解收到 Kattibliss 報名成功 Email 後，席次才正式成立。</label>
-    </div>
+      <div class="field"><label>這次來到《回家以後》，你最希望帶回的是什麼？</label><textarea id="expectation" placeholder="可以留白，或寫下此刻想到的。"></textarea></div>
 
-    <div id="err" class="error">請確認必填資料皆已完整填寫。</div>
-    <button id="submitBtn" class="submit" type="button" onclick="sendForm()">送出報名</button>
-  </form>
+      <div class="field"><label>你是否有已知會因香氛、香精或氣味引起明顯不適的情況？<span class="req">＊</span></label>
+        <div class="radio"><label class="option"><input type="radio" name="sensitivity" value="沒有" required onchange="toggleSensitivity(false)">沒有</label><label class="option"><input type="radio" name="sensitivity" value="有" onchange="toggleSensitivity(true)">有</label></div>
+        <div id="sensitivityBox" class="conditional"><textarea id="sensitivityNote" placeholder="請簡單說明我們需要事先知道的情況。"></textarea></div>
+      </div>
+
+      <h2>匯款資訊</h2>
+      <div class="field"><label>匯款帳號末五碼<span class="req">＊</span></label><input id="last5" type="text" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="請輸入 5 碼" required></div>
+      <div class="field"><label>匯款日期<span class="req">＊</span></label><input id="payDate" type="date" required></div>
+
+      <h2>發票資訊</h2>
+      <div class="field"><label>發票需要統一編號嗎？<span class="req">＊</span></label>
+        <div class="radio"><label class="option"><input type="radio" name="invoice" value="不需要" required onchange="toggleInvoice(false)">不需要，開立一般發票</label><label class="option"><input type="radio" name="invoice" value="需要" onchange="toggleInvoice(true)">需要</label></div>
+        <div id="invoiceBox" class="conditional">
+          <div class="field"><label>發票抬頭</label><input id="invoiceTitle" type="text"></div>
+          <div class="field"><label>統一編號</label><input id="taxId" type="text" inputmode="numeric" maxlength="8"></div>
+        </div>
+      </div>
+
+      <h2>報名與取消規則</h2>
+      <div class="card rules">
+        <p><strong>報名成立</strong>｜請先完成付款，再送出本表單。Kattibliss 核對款項與資料後，會以 Email 寄出報名成功通知；收到確認信後，席次正式成立。</p>
+        <p><strong>名額</strong>｜本場限 6 人。若額滿前後出現多人同時付款，將依實際付款／入帳時間順序確認席次；未能保留席次者將全額退款。</p>
+        <p><strong>開課 7 日前取消</strong>｜可申請全額退款。</p>
+        <p><strong>開課前 3～6 日取消</strong>｜退還課程費用 50%。</p>
+        <p><strong>開課前 0～2 日取消或當日未到</strong>｜恕無法退款。</p>
+        <p><strong>名額轉讓</strong>｜若臨時無法參加，可於開課前主動聯繫，將名額轉讓給一位親友，不另收費。</p>
+        <p><strong>若課程取消</strong>｜若因不可抗力、場地因素或 Kattibliss 端原因取消，學員可選擇全額退款或保留至下一場次。</p>
+        <p><strong>開班</strong>｜3 人成班、6 人滿班。若未達最低開班人數，Kattibliss 將於課程前通知，並提供全額退款或保留至下一場次。</p>
+        <p><strong>時間</strong>｜課程 14:30 準時開始，建議提前 5～10 分鐘抵達。前段包含完整的感受整理與匿名聞香流程，遲到較久可能無法補回所有內容。</p>
+      </div>
+
+      <div class="checks">
+        <label class="option"><input id="confirmDate" type="checkbox" required>我已確認可參加 2026/09/18（五）14:30 的課程。</label>
+        <label class="option"><input id="confirmRules" type="checkbox" required>我已閱讀並同意以上報名、取消、退款與名額轉讓規則。</label>
+        <label class="option"><input id="confirmPayment" type="checkbox" required>我已完成付款，並理解收到 Kattibliss 報名成功 Email 後，席次才正式成立。</label>
+      </div>
+
+      <div id="err" class="error">請確認必填資料皆已完整填寫。</div>
+      <button id="submitBtn" class="submit" type="button" onclick="sendForm()">送出報名</button>
+    </form>
+  </div>
 
   <div id="success" class="success"><h2>收到你的報名了。</h2><p>謝謝你替自己留下這段時間。<br><br>Kattibliss 會核對款項與報名資料，並以 Email 寄出報名成功通知。<br><br>9 月 18 日，我們《回家以後》見。</p></div>
 </div>
@@ -143,7 +145,9 @@ async function sendForm(){
   const btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='送出中…';
   try{
     await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});
-    f.style.display='none';document.getElementById('success').style.display='block';window.scrollTo({top:0,behavior:'smooth'});
+    document.getElementById('preSubmit').style.display='none';
+    document.getElementById('success').style.display='block';
+    window.scrollTo({top:0,behavior:'smooth'});
   }catch(e){btn.disabled=false;btn.textContent='送出報名';err.textContent='送出失敗，請稍後再試。';err.style.display='block';}
 }
 </script>

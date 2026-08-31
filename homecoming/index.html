@@ -6,42 +6,48 @@
 <title>《回家以後》｜給自己的氣味體驗課</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
-  *{box-sizing:border-box} body{margin:0;background:#faf9f7;color:#2a2724;font-family:'Noto Sans TC',sans-serif;font-weight:300;line-height:1.8}
-  .wrap{width:min(680px,calc(100% - 32px));margin:0 auto;padding:48px 0 72px}.brand{text-align:center;font-family:'Noto Serif TC',serif;font-size:11px;letter-spacing:.34em;color:#9a9189;margin-bottom:18px}
-  h1{font-family:'Noto Serif TC',serif;font-size:30px;font-weight:400;line-height:1.5;text-align:center;margin:0}.subtitle{text-align:center;color:#7d746c;margin:8px 0 28px;font-size:14px}.line{width:34px;height:1px;background:#d9d2cb;margin:0 auto 30px}
-  .intro{font-family:'Noto Serif TC',serif;font-size:15px;line-height:2.05;color:#514b46;margin:0 0 32px}.card{background:#fff;border:1px solid #ebe6e1;border-radius:14px;padding:24px;margin:22px 0}.info-row{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:7px 0;font-size:14px}.info-row b{font-weight:500;color:#6d655e}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#faf9f7;color:#2a2724;font-family:'Noto Sans TC',sans-serif;font-weight:300;line-height:1.8}
+  .wrap{width:min(680px,calc(100% - 32px));margin:0 auto;padding:34px 0 72px}.brand{text-align:center;font-family:'Noto Serif TC',serif;font-size:11px;letter-spacing:.34em;color:#9a9189;margin-bottom:18px}
+  h1{font-family:'Noto Serif TC',serif;font-size:32px;font-weight:400;line-height:1.45;text-align:center;margin:0}.subtitle{text-align:center;color:#8a8179;margin:6px 0 0;font-size:14px}.line{width:34px;height:1px;background:#d9d2cb;margin:22px auto 0}
+  .hero{text-align:center;padding:0 0 42px}.hero-copy{margin:34px auto 0;max-width:560px}.hero-kicker{font-family:'Noto Serif TC',serif;font-size:24px;line-height:1.65;font-weight:400;color:#38332f;margin:0 0 18px}.hero-reassure{font-size:15px;line-height:1.9;color:#655e58;margin:0 auto 18px}.hero-reassure strong{font-weight:500;color:#3f3935}.hero-difference{font-family:'Noto Serif TC',serif;font-size:14px;line-height:1.9;color:#746b64;margin:0}.hero-meta{font-size:13px;color:#746c65;margin:22px 0 0;letter-spacing:.02em}.hero-cta{display:inline-block;margin-top:22px;padding:11px 26px;border:1px solid #4b4540;border-radius:999px;color:#3b3632;text-decoration:none;font-size:13px;letter-spacing:.1em;transition:.2s}.hero-cta:hover{background:#3b3632;color:#fff}
+  .story{border-top:1px solid #e5dfd9;border-bottom:1px solid #e5dfd9;padding:42px 2px 38px;margin:0 0 30px}.story h2{margin:0 0 18px;font-size:21px}.story p{font-family:'Noto Serif TC',serif;font-size:15px;line-height:2;color:#554e48;margin:0 0 14px}.story p:last-child{margin-bottom:0}.story .closing{margin-top:24px;color:#39342f}
+  .card{background:#fff;border:1px solid #ebe6e1;border-radius:14px;padding:24px;margin:22px 0}.info-row{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:7px 0;font-size:14px}.info-row b{font-weight:500;color:#6d655e}
   h2{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:500;margin:38px 0 16px}.pay{background:#f4f0eb}.pay strong{font-weight:500}.pay .account{font-size:16px;letter-spacing:.03em}
   .field{margin:0 0 24px}.field label{display:block;font-size:13px;font-weight:500;color:#5f5750;margin-bottom:8px}.req{color:#a46f63;margin-left:4px}.hint{font-size:12px;color:#9b928a;margin-top:5px}.field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid #ded8d2;border-radius:9px;background:#fff;font:inherit;font-size:15px;color:#2a2724;outline:none}.field textarea{min-height:105px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:#8f847b}
   .radio,.checks{display:flex;flex-direction:column;gap:10px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid #e4ded8;background:#fff;border-radius:9px;font-size:14px}.option input{width:18px;height:18px;min-width:18px;min-height:18px;flex:0 0 18px;margin-top:6px;padding:0}.rules{font-size:13px;color:#655e58}.rules p{margin:8px 0}.rules strong{font-weight:500;color:#403b37}
   .submit{width:100%;border:0;border-radius:9px;background:#2f2b28;color:#fff;padding:15px;font:inherit;font-weight:500;letter-spacing:.08em;cursor:pointer;margin-top:28px}.submit:disabled{opacity:.45;cursor:not-allowed}.error{display:none;color:#a64c42;font-size:13px;text-align:center;margin-top:12px}.success{display:none;text-align:center;background:#fff;border:1px solid #ebe6e1;border-radius:14px;padding:52px 24px;margin-top:12vh}.success h2{margin:0 0 12px;font-size:22px}.success p{color:#756d66;font-size:14px}
-  .conditional{display:none;margin-top:14px}@media(max-width:520px){.wrap{padding-top:32px}h1{font-size:25px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}.success{margin-top:8vh}}
+  .conditional{display:none;margin-top:14px}
+  @media(max-width:520px){.wrap{padding-top:28px}.hero{padding-bottom:34px}h1{font-size:27px}.hero-copy{margin-top:28px}.hero-kicker{font-size:21px;margin-bottom:14px}.hero-reassure{font-size:14px}.hero-difference{font-size:13px}.hero-meta{line-height:1.8;margin-top:18px}.hero-cta{margin-top:18px}.story{padding:34px 2px 30px}.story h2{font-size:19px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}.success{margin-top:8vh}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div id="preSubmit">
-    <div class="brand">KATTIBLISS</div>
-    <h1>《回家以後》</h1>
-    <div class="subtitle">給自己的氣味體驗課</div>
-    <div class="line"></div>
+    <section class="hero">
+      <div class="brand">KATTIBLISS</div>
+      <h1>《回家以後》</h1>
+      <div class="subtitle">給自己的氣味體驗課</div>
+      <div class="line"></div>
 
-    <div class="intro">
-      有些時候，回到家了，心還沒有。<br><br>
-      《回家以後》想留一段時間，讓你不用再想下一件事。<br><br>
-      你不需要懂香調，也不用先知道自己喜歡什麼。<br>
-      不用背香材、不用猜答案，更不用擔心自己「不會聞」。<br><br>
-      你只要來。<br><br>
-      聞一聞，選一選，喜歡就留下，不喜歡就放下。<br>
-      有些感覺說得出來，有些說不出來，也都沒關係。<br><br>
-      課程裡有一段被設計過的數位陪伴，幫你把當下的感受輕輕接住；其餘的，就交給鼻子、交給當下，也交給我。<br><br>
-      最後，你會帶走一個屬於現在的自己的味道。<br><br>
-      不是因為你懂了多少香氣，<br>
-      而是這兩個多小時裡，你好好玩了一次，也好好待在自己身邊一次。<br><br>
-      等你真的把它帶回生活，<br>
-      《回家以後》才真正開始。
-    </div>
+      <div class="hero-copy">
+        <p class="hero-kicker">回到家，也把自己帶回來。</p>
+        <p class="hero-reassure">不用懂香調，不用會聞，也不用先知道自己喜歡什麼。<br><strong>把這兩個多小時交給我，開心來玩就好。</strong></p>
+        <p class="hero-difference">一段數位陪伴、一場匿名聞香，<br>最後帶走一個屬於現在的自己的味道。</p>
+        <p class="hero-meta">9/18（五）14:30 ｜ 府中 ｜ 6 人小班 ｜ NT$2,480</p>
+        <a class="hero-cta" href="#course-info">看課程與報名</a>
+      </div>
+    </section>
 
-    <div class="card">
+    <section class="story">
+      <h2>這不是做一瓶噴霧而已。</h2>
+      <p>聞一聞，選一選，喜歡就留下，不喜歡就放下。</p>
+      <p>有些感覺說得出來，有些說不出來，也都沒關係。</p>
+      <p>課程裡有一段被設計過的數位陪伴，幫你把當下的感受輕輕接住；其餘的，就交給鼻子、交給當下，也交給我。</p>
+      <p>最後，你會帶走一個屬於現在的自己的味道。</p>
+      <p class="closing">等你真的把它帶回生活，<br>《回家以後》才真正開始。</p>
+    </section>
+
+    <div id="course-info" class="card">
       <div class="info-row"><b>日期</b><span>2026/09/18（五）</span></div>
       <div class="info-row"><b>時間</b><span>14:30 開始，約 2.5 小時</span></div>
       <div class="info-row"><b>地點</b><span>府中捷運站附近，完成報名後提供詳細地址</span></div>

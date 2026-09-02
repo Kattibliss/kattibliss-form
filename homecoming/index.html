@@ -17,7 +17,7 @@
   .field{margin:0 0 24px}.field label{display:block;font-size:14px;font-weight:500;color:#5e4741;margin-bottom:8px}.req{color:#a46f63;margin-left:4px}.hint{font-size:12.5px;color:#6b615a;font-weight:400;line-height:1.65;margin-top:5px}.field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:#fffdfb;font:inherit;font-size:15px;color:#3f3732;outline:none}.field textarea{min-height:105px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(148,108,100,.1)}.field input::placeholder,.field textarea::placeholder{color:#84786f;opacity:1}
   .radio,.checks{display:flex;flex-direction:column;gap:10px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);background:#fffdfb;border-radius:9px;font-size:14px;transition:.16s ease}.option:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}.option input{width:18px;height:18px;min-width:18px;min-height:18px;flex:0 0 18px;margin-top:6px;padding:0;accent-color:var(--accent-dark)}.rules{font-size:13px;color:#5f554f;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border-color:#d6dacd}.rules p{margin:8px 0}.rules strong{font-weight:500;color:#5b463f}
   .submit{width:100%;border:0;border-radius:9px;background:var(--accent-dark);color:#fffaf6;padding:15px;font:inherit;font-weight:500;letter-spacing:.08em;cursor:pointer;margin-top:28px}.submit:disabled{opacity:.45;cursor:not-allowed}.error{display:none;color:#a64c42;font-size:13px;text-align:center;margin-top:12px}.success{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--accent-soft));border:1px solid var(--line);border-radius:14px;padding:52px 24px;margin-top:12vh}.success h2{margin:0 0 12px;font-size:22px}.success p{color:#625750;font-size:14px}
-  .conditional{display:none;margin-top:14px}
+  .conditional{display:none;margin-top:14px}.manual-state{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border:1px solid #d6dacd;border-radius:14px;padding:38px 24px;margin-top:28px}.manual-state h2{margin-top:0}.manual-state .state-copy{max-width:30em;margin:0 auto 24px}.manual-state form{text-align:left}.manual-state .submit{margin-top:20px}.interest-success{display:none;text-align:center;padding:24px 8px;color:#5b463f}.interest-success .heart{display:block;margin:8px 0;font-size:22px;color:var(--accent-dark)}
   @media(max-width:520px){.wrap{padding-top:28px}.hero{padding-bottom:34px}h1{font-size:27px}.hero-copy{margin-top:28px}.hero-kicker{font-size:21px;margin-bottom:14px}.hero-reassure{font-size:14px}.hero-difference{font-size:13px}.hero-meta{line-height:1.8;margin-top:18px}.hero-cta{margin-top:18px}.story{padding:34px 18px 30px}.story h2{font-size:19px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}.payment-grid{grid-template-columns:62px 1fr}.success{margin-top:8vh}}
 </style>
 </head>
@@ -57,6 +57,7 @@
       <div class="info-row"><b>作品</b><span>50ml《回家香氣空間噴霧》一瓶</span></div>
     </div>
 
+    <div id="registrationOpen">
     <h2>報名方式</h2>
     <p class="signup-intro"><strong>先完成付款，再填寫報名表，即可保留席次。</strong></p>
 
@@ -135,15 +136,77 @@
       <div id="err" class="error">請確認必填資料皆已完整填寫。</div>
       <button id="submitBtn" class="submit" type="button" onclick="sendForm()">送出報名</button>
     </form>
+    </div>
+
+    <section id="registrationClosed" class="manual-state">
+      <div id="interestIntro">
+        <p class="eyebrow" id="stateEyebrow">《回家以後》</p>
+        <h2 id="stateTitle">這一場，位置已經坐滿了。</h2>
+        <p id="stateCopy" class="state-copy">謝謝你也想來《回家以後》。如果這次沒遇上，可以把聯絡方式留給我；有人臨時取消，或下一場日期確定時，我會優先告訴你。</p>
+        <form id="interestForm" onsubmit="return false;">
+          <div class="field"><label>姓名／暱稱<span class="req">＊</span></label><input id="interestName" type="text" required></div>
+          <div class="field"><label>Email<span class="req">＊</span></label><input id="interestEmail" type="email" autocomplete="email" required></div>
+          <div class="field"><label>LINE 顯示名稱<span class="req">＊</span></label><input id="interestLine" type="text" required><div class="hint">方便 Katti 找到你，不需要填寫 LINE ID。</div></div>
+          <div class="field"><label>你是從哪裡知道《回家以後》的？（可不填）</label><select id="interestSource"><option value="">請選擇</option><option>Katti 個人 Facebook</option><option>kattibliss 氣味棲所</option><option>Instagram</option><option>Katti 的朋友/學員</option><option>朋友分享／介紹</option><option>曾參加過 Kattibliss 的活動</option><option>其他</option></select></div>
+          <div id="interestErr" class="error">請確認必填資料皆已完整填寫。</div>
+          <button id="interestBtn" class="submit" type="button" onclick="sendInterest()">下一場，請先告訴我</button>
+        </form>
+      </div>
+      <div id="interestSuccess" class="interest-success"><h2>收到</h2><span class="heart">♡</span><p>下一次《回家以後》準備好時，我會先來找你。<br>如果 9/18 臨時有位置釋出，也會優先通知。</p></div>
+    </section>
   </div>
 
   <div id="success" class="success"><h2>收到你的報名了。</h2><p>謝謝你替自己留下這段時間。<br><br>Kattibliss 會核對款項與報名資料，並以 Email 寄出報名成功通知。<br><br>9 月 18 日，我們《回家以後》見。</p></div>
 </div>
 <script>
+const REGISTRATION_MODE='open'; // open｜last｜full
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwhooqZdeEguD6vnQXQlwCb6Zgqvnp4qHmgmu-g1IoAwLtTYw9qo2zE4tNEehzH71V_/exec';
 function toggleInvoice(show){document.getElementById('invoiceBox').style.display=show?'block':'none';}
 function toggleSensitivity(show){document.getElementById('sensitivityBox').style.display=show?'block':'none';}
 function checked(name){const x=document.querySelector(`input[name="${name}"]:checked`);return x?x.value:'';}
+function setupRegistrationMode(){
+  if(REGISTRATION_MODE==='open') return;
+  document.getElementById('registrationOpen').style.display='none';
+  const closed=document.getElementById('registrationClosed');closed.style.display='block';
+  if(REGISTRATION_MODE==='last'){
+    document.getElementById('stateEyebrow').textContent='9/18｜最後一席';
+    document.getElementById('stateTitle').textContent='這一場，還留著最後一個位置。';
+    document.getElementById('stateCopy').textContent='為了避免多人同時匯款，付款資訊先暫時收起。請先留下聯絡方式，Katti 確認席次後，會再把付款方式告訴你。';
+    document.getElementById('interestBtn').textContent='我想登記最後一席';
+  }
+}
+async function sendInterest(){
+  const form=document.getElementById('interestForm'),err=document.getElementById('interestErr');err.style.display='none';
+  if(!form.reportValidity()) return;
+  const status=REGISTRATION_MODE==='last'?'最後一席登記':'優先通知';
+  const payload={
+    timestamp:new Date().toLocaleString('zh-TW',{timeZone:'Asia/Taipei'}),
+    formType:'homecoming_20260918',
+    name:document.getElementById('interestName').value.trim(),
+    email:document.getElementById('interestEmail').value.trim(),
+    phone:'',
+    source:document.getElementById('interestSource').value,
+    experience:'',
+    expectation:'LINE 顯示名稱：'+document.getElementById('interestLine').value.trim(),
+    sensitivity:'',
+    sensitivityNote:'',
+    transferLast5:'',
+    paymentDate:'',
+    invoice:'',
+    invoiceTitle:'',
+    taxId:'',
+    course:'《回家以後》｜給自己的氣味體驗課',
+    session:'2026/09/18 14:30',
+    fee:'2480',
+    status
+  };
+  const btn=document.getElementById('interestBtn');btn.disabled=true;btn.textContent='送出中…';
+  try{
+    await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});
+    document.getElementById('interestIntro').style.display='none';
+    document.getElementById('interestSuccess').style.display='block';
+  }catch(e){btn.disabled=false;btn.textContent=REGISTRATION_MODE==='last'?'我想登記最後一席':'下一場，請先告訴我';err.textContent='送出失敗，請稍後再試。';err.style.display='block';}
+}
 async function sendForm(){
   const f=document.getElementById('regForm'),err=document.getElementById('err');err.style.display='none';
   if(!f.reportValidity()) return;
@@ -187,6 +250,7 @@ async function sendForm(){
     window.scrollTo({top:0,behavior:'smooth'});
   }catch(e){btn.disabled=false;btn.textContent='送出報名';err.textContent='送出失敗，請稍後再試。';err.style.display='block';}
 }
+setupRegistrationMode();
 </script>
 </body>
 </html>

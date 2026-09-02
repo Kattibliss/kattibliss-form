@@ -17,8 +17,8 @@
   .field{margin:0 0 24px}.field label{display:block;font-size:14px;font-weight:500;color:#5e4741;margin-bottom:8px}.req{color:#a46f63;margin-left:4px}.hint{font-size:12.5px;color:#6b615a;font-weight:400;line-height:1.65;margin-top:5px}.field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:#fffdfb;font:inherit;font-size:15px;color:#3f3732;outline:none}.field textarea{min-height:105px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(148,108,100,.1)}.field input::placeholder,.field textarea::placeholder{color:#84786f;opacity:1}
   .radio,.checks{display:flex;flex-direction:column;gap:10px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);background:#fffdfb;border-radius:9px;font-size:14px;transition:.16s ease}.option:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}.option input{width:18px;height:18px;min-width:18px;min-height:18px;flex:0 0 18px;margin-top:6px;padding:0;accent-color:var(--accent-dark)}.rules{font-size:13px;color:#5f554f;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border-color:#d6dacd}.rules p{margin:8px 0}.rules strong{font-weight:500;color:#5b463f}
   .submit{width:100%;border:0;border-radius:9px;background:var(--accent-dark);color:#fffaf6;padding:15px;font:inherit;font-weight:500;letter-spacing:.08em;cursor:pointer;margin-top:28px}.submit:disabled{opacity:.45;cursor:not-allowed}.error{display:none;color:#a64c42;font-size:13px;text-align:center;margin-top:12px}.success{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--accent-soft));border:1px solid var(--line);border-radius:14px;padding:52px 24px;margin-top:12vh}.success h2{margin:0 0 12px;font-size:22px}.success p{color:#625750;font-size:14px}
-  .conditional{display:none;margin-top:14px}.manual-state{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border:1px solid #d6dacd;border-radius:14px;padding:38px 24px;margin-top:28px}.manual-state h2{margin-top:0}.manual-state .state-copy{max-width:30em;margin:0 auto 24px}.manual-state form{text-align:left}.manual-state .submit{margin-top:20px}.interest-success{display:none;text-align:center;padding:24px 8px;color:#5b463f}.interest-success .heart{display:block;margin:8px 0;font-size:22px;color:var(--accent-dark)}
-  @media(max-width:520px){.wrap{padding-top:28px}.hero{padding-bottom:34px}h1{font-size:27px}.hero-copy{margin-top:28px}.hero-kicker{font-size:21px;margin-bottom:14px}.hero-reassure{font-size:14px}.hero-difference{font-size:13px}.hero-meta{line-height:1.8;margin-top:18px}.hero-cta{margin-top:18px}.story{padding:34px 18px 30px}.story h2{font-size:19px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}.payment-grid{grid-template-columns:62px 1fr}.success{margin-top:8vh}}
+  .conditional{display:none;margin-top:14px}.journey{margin:0 0 36px;padding:38px 30px;background:linear-gradient(145deg,var(--paper) 0,var(--sage-soft) 56%,var(--cream) 100%);border:1px solid #d6dacd;border-radius:14px}.journey h2{margin-top:0}.journey p{font-size:14.5px;line-height:1.9;color:#5f554f}.journey .journey-pause{margin-top:22px;color:#765149;font-weight:500}.journey-question{margin:20px 0;padding:18px 20px;text-align:center;background:rgba(255,250,245,.72);border:1px solid #dfd2c9;border-radius:12px;color:#765149;font-family:"Noto Serif TC",serif;font-size:18px;line-height:1.75}.journey-closing{margin-bottom:0!important;color:#5b463f!important}.manual-state{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border:1px solid #d6dacd;border-radius:14px;padding:38px 24px;margin-top:28px}.manual-state h2{margin-top:0}.manual-state .state-copy{max-width:30em;margin:0 auto 24px}.manual-state form{text-align:left}.manual-state .submit{margin-top:20px}.interest-success{display:none;text-align:center;padding:24px 8px;color:#5b463f}.interest-success .heart{display:block;margin:8px 0;font-size:22px;color:var(--accent-dark)}
+  @media(max-width:520px){.wrap{padding-top:28px}.journey{padding:30px 20px}.journey-question{font-size:17px;padding:16px 14px}.hero{padding-bottom:34px}h1{font-size:27px}.hero-copy{margin-top:28px}.hero-kicker{font-size:21px;margin-bottom:14px}.hero-reassure{font-size:14px}.hero-difference{font-size:13px}.hero-meta{line-height:1.8;margin-top:18px}.hero-cta{margin-top:18px}.story{padding:34px 18px 30px}.story h2{font-size:19px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}.payment-grid{grid-template-columns:62px 1fr}.success{margin-top:8vh}}
 </style>
 </head>
 <body>
@@ -43,9 +43,20 @@
       <h2>這不是做一瓶噴霧而已。</h2>
       <p>聞一聞，選一選，喜歡就留下，不喜歡就放下。</p>
       <p>有些感覺說得出來，有些說不出來，也都沒關係。</p>
-      <p>課程裡有一段被設計過的數位陪伴，幫你把當下的感受輕輕接住；其餘的，就交給鼻子、交給當下，也交給我。</p>
+      <p>課程裡會透過手機裡的一段互動引導，先陪你整理最近回到家的感受；其餘的，就交給鼻子、交給當下，也交給我。</p>
       <p>最後，你會帶走一個屬於現在的自己的味道。</p>
       <p class="closing">等你真的把它帶回生活，<br>《回家以後》才真正開始。</p>
+    </section>
+
+    <section class="journey">
+      <p class="eyebrow">這段時間，會怎麼度過</p>
+      <h2>先從最近的自己開始。</h2>
+      <p>我們不會一開始就急著選香氣。</p>
+      <p>你會先透過手機裡一段簡單的互動引導，慢慢整理最近回到家的感覺。那些平常很難說清楚的，也不需要勉強說得完整。</p>
+      <p class="journey-pause">接著，才開始聞香。</p>
+      <p>你不會先知道它們叫什麼，也不需要判斷屬於哪一種香調。只需要留意一件事：</p>
+      <div class="journey-question">這個味道，<br>我想不想讓它留在我的生活裡？</div>
+      <p class="journey-closing">Katti 會陪你一層一層找到真正靠近自己的氣味，再依照「確認方向、確認結構、調整比例、調整濃度」完成一瓶屬於現在自己的《回家香氣》。</p>
     </section>
 
     <div id="course-info" class="card">

@@ -17,8 +17,14 @@
   .field{margin:0 0 24px}.field label{display:block;font-size:14px;font-weight:500;color:#5e4741;margin-bottom:8px}.req{color:#a46f63;margin-left:4px}.hint{font-size:12.5px;color:#6b615a;font-weight:400;line-height:1.65;margin-top:5px}.field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:#fffdfb;font:inherit;font-size:15px;color:#3f3732;outline:none}.field textarea{min-height:105px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(148,108,100,.1)}.field input::placeholder,.field textarea::placeholder{color:#84786f;opacity:1}
   .radio,.checks{display:flex;flex-direction:column;gap:10px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);background:#fffdfb;border-radius:9px;font-size:14px;transition:.16s ease}.option:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}.option input{width:18px;height:18px;min-width:18px;min-height:18px;flex:0 0 18px;margin-top:6px;padding:0;accent-color:var(--accent-dark)}.rules{font-size:13px;color:#5f554f;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border-color:#d6dacd}.rules p{margin:8px 0}.rules strong{font-weight:500;color:#5b463f}
   .submit{width:100%;border:0;border-radius:9px;background:var(--accent-dark);color:#fffaf6;padding:15px;font:inherit;font-weight:500;letter-spacing:.08em;cursor:pointer;margin-top:28px}.submit:disabled{opacity:.45;cursor:not-allowed}.error{display:none;color:#a64c42;font-size:13px;text-align:center;margin-top:12px}.success{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--accent-soft));border:1px solid var(--line);border-radius:14px;padding:52px 24px;margin-top:12vh}.success h2{margin:0 0 12px;font-size:22px}.success p{color:#625750;font-size:14px}
-  .conditional{display:none;margin-top:14px}.journey{margin:0 0 36px;padding:38px 30px;background:linear-gradient(145deg,var(--paper) 0,var(--sage-soft) 56%,var(--cream) 100%);border:1px solid #d6dacd;border-radius:14px}.journey h2{margin-top:0}.journey p{font-size:14.5px;line-height:1.9;color:#5f554f}.journey .journey-pause{margin-top:22px;color:#765149;font-weight:500}.journey-question{margin:20px 0;padding:18px 20px;text-align:center;background:rgba(255,250,245,.72);border:1px solid #dfd2c9;border-radius:12px;color:#765149;font-family:"Noto Serif TC",serif;font-size:18px;line-height:1.75}.journey-closing{margin-bottom:0!important;color:#5b463f!important}.manual-state{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border:1px solid #d6dacd;border-radius:14px;padding:38px 24px;margin-top:28px}.manual-state h2{margin-top:0}.manual-state .state-copy{max-width:30em;margin:0 auto 24px}.manual-state form{text-align:left}.manual-state .submit{margin-top:20px}.interest-success{display:none;text-align:center;padding:24px 8px;color:#5b463f}.interest-success .heart{display:block;margin:8px 0;font-size:22px;color:var(--accent-dark)}
-  @media(max-width:520px){.wrap{padding-top:28px}.journey{padding:30px 20px}.journey-question{font-size:17px;padding:16px 14px}.hero{padding-bottom:34px}h1{font-size:27px}.hero-copy{margin-top:28px}.hero-kicker{font-size:21px;margin-bottom:14px}.hero-reassure{font-size:14px}.hero-difference{font-size:13px}.hero-meta{line-height:1.8;margin-top:18px}.hero-cta{margin-top:18px}.story{padding:34px 18px 30px}.story h2{font-size:19px}.card{padding:20px}.info-row{grid-template-columns:74px 1fr}.payment-grid{grid-template-columns:62px 1fr}.success{margin-top:8vh}}
+  .conditional{display:none;margin-top:14px}
+  .keep{white-space:nowrap}.story{padding:34px 24px 30px}.story p{max-width:31em;margin-left:auto;margin-right:auto}.story .closing{margin-top:18px}
+  .journey{margin:0 0 30px;padding:36px 26px;background:linear-gradient(145deg,var(--paper) 0,var(--sage-soft) 56%,var(--cream) 100%);border:1px solid #d6dacd;border-radius:16px}.journey>h2{margin:0 0 24px;text-align:center}.journey-list{display:grid;gap:12px}.journey-step{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:15px 16px;background:rgba(255,250,245,.7);border:1px solid rgba(221,208,199,.9);border-radius:13px}.journey-icon,.info-icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-dark)}.journey-icon svg,.info-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.journey-copy h3{margin:0 0 3px;font-family:'Noto Serif TC',serif;font-size:16px;font-weight:500;color:var(--accent-dark)}.journey-copy p{margin:0;font-size:13.5px;line-height:1.75;color:#5f554f}.step-no{font-size:10px;letter-spacing:.08em;color:var(--sage);margin-right:6px}
+  .info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.info-item{display:grid;grid-template-columns:38px 1fr;gap:11px;align-items:center;padding:14px;background:rgba(255,250,245,.72);border:1px solid rgba(214,218,205,.95);border-radius:12px}.info-item b{display:block;color:var(--sage);font-size:12px;font-weight:500;margin-bottom:2px}.info-item span{display:block;color:#4b423c;font-size:13.5px;line-height:1.55}
+  .rules-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:14px}.rule-point{padding:13px 14px;background:rgba(255,250,245,.72);border:1px solid #d6dacd;border-radius:10px;font-size:12.5px;line-height:1.65;color:#5f554f}.rule-point strong{display:block;color:#5b463f;margin-bottom:2px}.rules-details{border-top:1px solid #d6dacd;padding-top:12px}.rules-details summary{cursor:pointer;color:var(--accent-dark);font-weight:500;list-style:none;padding:6px 0}.rules-details summary::-webkit-details-marker{display:none}.rules-full{padding-top:8px}
+  .manual-state{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border:1px solid #d6dacd;border-radius:14px;padding:38px 24px;margin-top:28px}.manual-state h2{margin-top:0}.manual-state .state-copy{max-width:30em;margin:0 auto 24px}.manual-state form{text-align:left}.manual-state .submit{margin-top:20px}.interest-success{display:none;text-align:center;padding:24px 8px;color:#5b463f}.interest-success .heart{display:block;margin:8px 0;font-size:22px;color:var(--accent-dark)}
+  h1,h2,h3,p,label,button,summary,.info-item span,.option{text-wrap:pretty;word-break:normal;overflow-wrap:break-word}
+  @media(max-width:520px){.wrap{width:min(100% - 24px,680px);padding-top:28px}.hero{padding-bottom:30px}h1{font-size:27px}.hero-copy{margin-top:26px}.hero-kicker{font-size:21px;margin-bottom:14px}.hero-reassure{font-size:14px;max-width:24em}.hero-difference{font-size:13px;max-width:26em;margin-left:auto;margin-right:auto}.hero-cta{margin-top:18px}.story{padding:30px 18px 27px;margin-bottom:22px}.story h2{font-size:19px}.journey{padding:28px 15px}.journey>h2{font-size:19px;margin-bottom:20px}.journey-step{grid-template-columns:36px 1fr;gap:11px;padding:13px 12px}.journey-icon,.info-icon{width:34px;height:34px}.journey-icon svg,.info-icon svg{width:19px;height:19px}.journey-copy h3{font-size:15px}.journey-copy p{font-size:13px}.card{padding:18px 15px}.info-grid{grid-template-columns:1fr}.info-item{padding:12px}.rules-summary{grid-template-columns:1fr}.rule-point{padding:11px 12px}.payment-grid{grid-template-columns:62px 1fr}.success{margin-top:8vh;padding:42px 18px}.manual-state{padding:32px 17px}}
 </style>
 </head>
 <body>
@@ -32,40 +38,53 @@
 
       <div class="hero-copy">
         <p class="hero-kicker">回到家，也把自己帶回來。</p>
-        <p class="hero-reassure">不用懂香調，不用會聞，也不用先知道自己喜歡什麼。<br><strong>把這段時間交給我，開心來玩就好。</strong></p>
-        <p class="hero-difference">透過數位陪伴與匿名聞香，<br>找到適合自己回家後使用的氣味，並親手完成一瓶 50ml《回家香氣空間噴霧》。</p>
-        <p class="hero-meta">9/18（五）14:30 ｜ 府中 ｜ 6 人小班 ｜ NT$2,480</p>
+        <p class="hero-reassure">不用懂香調，不用會聞，也不用先知道自己喜歡什麼。<strong>把這段時間交給我，開心來玩就好。</strong></p>
+        <p class="hero-difference">從最近的生活與感受開始，慢慢找到想帶回家的氣味。</p>
         <a class="hero-cta" href="#course-info">看課程與報名</a>
       </div>
     </section>
 
     <section class="story">
       <h2>這不是做一瓶噴霧而已。</h2>
-      <p>聞一聞，選一選，喜歡就留下，不喜歡就放下。</p>
-      <p>有些感覺說得出來，有些說不出來，也都沒關係。</p>
-      <p>課程裡會透過手機裡的一段互動引導，先陪你整理最近回到家的感受；其餘的，就交給鼻子、交給當下，也交給我。</p>
-      <p>最後，你會帶走一個屬於現在的自己的味道。</p>
-      <p class="closing">等你真的把它帶回生活，<br>《回家以後》才真正開始。</p>
+      <p>喜歡就留下，不喜歡就放下；有些感覺說不清楚，也沒有關係。</p>
+      <p class="closing">等你把氣味帶回生活，<span class="keep">《回家以後》</span>才真正開始。</p>
     </section>
 
     <section class="journey">
-      <p class="eyebrow">這兩個半小時，你會這樣度過</p>
-      <h2>先從最近的自己開始。</h2>
-      <p>我們不會一開始就急著選香氣。</p>
-      <p>你會先透過手機裡一段簡單的互動引導，慢慢整理最近回到家的感覺。那些平常很難說清楚的，也不需要勉強說得完整。</p>
-      <p class="journey-pause">接著，才開始聞香。</p>
-      <p>你不會先知道它們叫什麼，也不需要判斷屬於哪一種香調。只需要留意一件事：</p>
-      <div class="journey-question">這個味道，<br>我想不想讓它留在我的生活裡？</div>
-      <p class="journey-closing">Katti 會陪你一層一層找到真正靠近自己的氣味，再依照「確認方向、確認結構、調整比例、調整濃度」完成一瓶屬於現在自己的《回家香氣》。</p>
+      <h2>這兩個半小時，你會這樣度過</h2>
+      <div class="journey-list">
+        <article class="journey-step">
+          <div class="journey-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></div>
+          <div class="journey-copy"><h3><span class="step-no">01</span>先回到自己</h3><p>透過手機互動，整理最近的生活與感受。</p></div>
+        </article>
+        <article class="journey-step">
+          <div class="journey-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18c2-2 2-4 0-6s-2-4 0-6M12 20c3-3 3-6 0-9s-3-6 0-9M17 18c2-2 2-4 0-6s-2-4 0-6"/></svg></div>
+          <div class="journey-copy"><h3><span class="step-no">02</span>開始聞香</h3><p>不看香名、不考知識。喜歡就留下，不喜歡就放下。</p></div>
+        </article>
+        <article class="journey-step">
+          <div class="journey-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M7 7l-3 5 3 5M17 7l3 5-3 5"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+          <div class="journey-copy"><h3><span class="step-no">03</span>慢慢找到</h3><p>一層一層縮小選擇，Katti 陪你找到靠近自己的氣味。</p></div>
+        </article>
+        <article class="journey-step">
+          <div class="journey-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v4l2 3v10H6V10l2-3V3Z"/><path d="M8 7h8M9 14h6"/></svg></div>
+          <div class="journey-copy"><h3><span class="step-no">04</span>做成自己的氣味</h3><p>完成一瓶 <span class="keep">50ml</span> <span class="keep">《回家香氣空間噴霧》</span>。</p></div>
+        </article>
+        <article class="journey-step">
+          <div class="journey-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10M10 20v-6h4v6"/></svg></div>
+          <div class="journey-copy"><h3><span class="step-no">05</span>帶回生活</h3><p>讓找到的氣味，真正回到你的日常。</p></div>
+        </article>
+      </div>
     </section>
 
     <div id="course-info" class="card">
-      <div class="info-row"><b>日期</b><span>2026/09/18（五）</span></div>
-      <div class="info-row"><b>時間</b><span>14:30 開始，約 2.5 小時</span></div>
-      <div class="info-row"><b>地點</b><span>府中捷運站附近，完成報名後提供詳細地址</span></div>
-      <div class="info-row"><b>人數</b><span>最多 6 人｜3 人成班</span></div>
-      <div class="info-row"><b>費用</b><span>NT$2,480／人（含稅）</span></div>
-      <div class="info-row"><b>作品</b><span>50ml《回家香氣空間噴霧》一瓶</span></div>
+      <div class="info-grid">
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div><div><b>日期</b><span class="keep">2026/09/18（五）</span></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>時間</b><span><span class="keep">14:30</span> 開始，約 <span class="keep">2.5 小時</span></span></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><b>地點</b><span>府中捷運站附近；報名後提供詳細地址</span></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-4 2.5-7 6-7s6 3 6 7M14 15c3.5 0 6 2 6 5"/></svg></div><div><b>人數</b><span>最多 <span class="keep">6 人</span>；<span class="keep">3 人</span>成班</span></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 9h8M8 15h8M12 6v12"/></svg></div><div><b>費用</b><span class="keep">NT$2,480／人（含稅）</span></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M8 3h8v4l2 3v10H6V10l2-3V3Z"/><path d="M8 7h8M9 14h6"/></svg></div><div><b>作品</b><span><span class="keep">50ml</span> <span class="keep">《回家香氣空間噴霧》</span></span></div></div>
+      </div>
     </div>
 
     <div id="registrationOpen">
@@ -127,15 +146,26 @@
 
       <h2>報名與取消規則</h2>
       <div class="card rules">
-        <p><strong>報名成立</strong>｜請先完成付款，再送出本表單。Kattibliss 核對款項與資料後，會以 Email 寄出報名成功通知；收到確認信後，席次正式成立。</p>
-        <p><strong>名額</strong>｜本場限 6 人。若額滿前後出現多人同時付款，將依實際付款／入帳時間順序確認席次；未能保留席次者將全額退款。</p>
-        <p><strong>開課 7 日前取消</strong>｜可申請全額退款。</p>
-        <p><strong>開課前 3～6 日取消</strong>｜退還課程費用 50%。</p>
-        <p><strong>開課前 0～2 日取消或當日未到</strong>｜恕無法退款。</p>
-        <p><strong>名額轉讓</strong>｜若臨時無法參加，可於開課前主動聯繫，將名額轉讓給一位親友，不另收費。</p>
-        <p><strong>若課程取消</strong>｜若因不可抗力、場地因素或 Kattibliss 端原因取消，學員可選擇全額退款或保留至下一場次。</p>
-        <p><strong>開班</strong>｜3 人成班、6 人滿班。若未達最低開班人數，Kattibliss 將於課程前通知，並提供全額退款或保留至下一場次。</p>
-        <p><strong>時間</strong>｜課程 14:30 準時開始，建議提前 5～10 分鐘抵達。前段包含完整的感受整理與匿名聞香流程，遲到較久可能無法補回所有內容。</p>
+        <div class="rules-summary">
+          <div class="rule-point"><strong>席次成立</strong>付款並送出表單後，以收到確認信為準。</div>
+          <div class="rule-point"><strong>臨時不能來</strong>可依取消期限申請退款，或提前聯繫轉讓親友。</div>
+          <div class="rule-point"><strong>3 人成班</strong>未達成班人數，將通知退款或保留至下一場。</div>
+          <div class="rule-point"><strong>建議抵達時間</strong><span class="keep">14:30</span> 開始，請提前 <span class="keep">5～10 分鐘</span>抵達。</div>
+        </div>
+        <details class="rules-details">
+          <summary>＋ 查看完整報名／取消／退款規則</summary>
+          <div class="rules-full">
+            <p><strong>報名成立</strong>｜請先完成付款，再送出本表單。Kattibliss 核對款項與資料後，會以 Email 寄出報名成功通知；收到確認信後，席次正式成立。</p>
+            <p><strong>名額</strong>｜本場限 6 人。若額滿前後出現多人同時付款，將依實際付款／入帳時間順序確認席次；未能保留席次者將全額退款。</p>
+            <p><strong>開課 7 日前取消</strong>｜可申請全額退款。</p>
+            <p><strong>開課前 3～6 日取消</strong>｜退還課程費用 50%。</p>
+            <p><strong>開課前 0～2 日取消或當日未到</strong>｜恕無法退款。</p>
+            <p><strong>名額轉讓</strong>｜若臨時無法參加，可於開課前主動聯繫，將名額轉讓給一位親友，不另收費。</p>
+            <p><strong>若課程取消</strong>｜若因不可抗力、場地因素或 Kattibliss 端原因取消，學員可選擇全額退款或保留至下一場次。</p>
+            <p><strong>開班</strong>｜3 人成班、6 人滿班。若未達最低開班人數，Kattibliss 將於課程前通知，並提供全額退款或保留至下一場次。</p>
+            <p><strong>時間</strong>｜課程 14:30 準時開始，建議提前 5～10 分鐘抵達。前段包含完整的感受整理與匿名聞香流程，遲到較久可能無法補回所有內容。</p>
+          </div>
+        </details>
       </div>
 
       <div class="checks">
@@ -189,7 +219,7 @@ function setupRegistrationMode(){
 async function sendInterest(){
   const form=document.getElementById('interestForm'),err=document.getElementById('interestErr');err.style.display='none';
   if(!form.reportValidity()) return;
-  const status=REGISTRATION_MODE==='last'?'最後一席登記':'優先通知';
+  const status=REGISTRATION_MODE==='last'?'最後一席登記':'未通知';
   const payload={
     timestamp:new Date().toLocaleString('zh-TW',{timeZone:'Asia/Taipei'}),
     formType:'homecoming_20260918',

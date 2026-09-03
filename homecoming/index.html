@@ -20,7 +20,7 @@
   .conditional{display:none;margin-top:14px}
   .keep{white-space:nowrap}.story{padding:34px 24px 30px}.story p{max-width:31em;margin-left:auto;margin-right:auto}.story .closing{margin-top:18px}
   .journey{margin:0 0 30px;padding:36px 26px;background:linear-gradient(145deg,var(--paper) 0,var(--sage-soft) 56%,var(--cream) 100%);border:1px solid #d6dacd;border-radius:16px}.journey>h2{margin:0 0 24px;text-align:center}.journey-list{display:grid;gap:12px}.journey-step{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:15px 16px;background:rgba(255,250,245,.7);border:1px solid rgba(221,208,199,.9);border-radius:13px}.journey-icon,.info-icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-dark)}.journey-icon svg,.info-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.journey-copy h3{margin:0 0 3px;font-family:'Noto Serif TC',serif;font-size:16px;font-weight:500;color:var(--accent-dark)}.journey-copy p{margin:0;font-size:13.5px;line-height:1.75;color:#5f554f}.step-no{font-size:10px;letter-spacing:.08em;color:var(--sage);margin-right:6px}
-  .info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.info-item{display:grid;grid-template-columns:38px 1fr;gap:11px;align-items:center;padding:14px;background:rgba(255,250,245,.72);border:1px solid rgba(214,218,205,.95);border-radius:12px}.info-item b{display:block;color:var(--sage);font-size:12px;font-weight:500;margin-bottom:2px}.info-item span{display:block;color:#4b423c;font-size:13.5px;line-height:1.55}
+  .info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.info-item{display:grid;grid-template-columns:38px 1fr;gap:11px;align-items:center;padding:14px;background:rgba(255,250,245,.72);border:1px solid rgba(214,218,205,.95);border-radius:12px}.info-item b{display:block;color:var(--sage);font-size:12px;font-weight:500;margin-bottom:2px}.info-item>div>span{display:block;color:#4b423c;font-size:13.5px;line-height:1.55}.info-item span.keep{display:inline;white-space:nowrap}
   .rules-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:14px}.rule-point{padding:13px 14px;background:rgba(255,250,245,.72);border:1px solid #d6dacd;border-radius:10px;font-size:12.5px;line-height:1.65;color:#5f554f}.rule-point strong{display:block;color:#5b463f;margin-bottom:2px}.rules-details{border-top:1px solid #d6dacd;padding-top:12px}.rules-details summary{cursor:pointer;color:var(--accent-dark);font-weight:500;list-style:none;padding:6px 0}.rules-details summary::-webkit-details-marker{display:none}.rules-full{padding-top:8px}
   .manual-state{display:none;text-align:center;background:linear-gradient(145deg,var(--paper),var(--sage-soft));border:1px solid #d6dacd;border-radius:14px;padding:38px 24px;margin-top:28px}.manual-state h2{margin-top:0}.manual-state .state-copy{max-width:30em;margin:0 auto 24px}.manual-state form{text-align:left}.manual-state .submit{margin-top:20px}.interest-success{display:none;text-align:center;padding:24px 8px;color:#5b463f}.interest-success .heart{display:block;margin:8px 0;font-size:22px;color:var(--accent-dark)}
   h1,h2,h3,p,label,button,summary,.info-item span,.option{text-wrap:pretty;word-break:normal;overflow-wrap:break-word}
@@ -47,6 +47,7 @@
     <section class="story">
       <h2>這不是做一瓶噴霧而已。</h2>
       <p>喜歡就留下，不喜歡就放下；有些感覺說不清楚，也沒有關係。</p>
+      <p>我們會先從最近的自己開始，一步一步，把感受慢慢做成能帶回生活的氣味。</p>
       <p class="closing">等你把氣味帶回生活，<span class="keep">《回家以後》</span>才真正開始。</p>
     </section>
 
@@ -133,14 +134,14 @@
 
       <h2>匯款資訊</h2>
       <div class="field"><label>匯款帳號末五碼<span class="req">＊</span></label><input id="last5" type="text" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="請輸入 5 碼" required></div>
-      <div class="field"><label>匯款日期<span class="req">＊</span></label><input id="payDate" type="date" required></div>
+      <div class="field"><label>匯款日期<span class="req">＊</span></label><input id="payDate" type="date" required><div class="hint">請填寫實際完成匯款的日期，不可晚於今天。</div></div>
 
       <h2>發票資訊</h2>
       <div class="field"><label>發票需要統一編號嗎？<span class="req">＊</span></label>
         <div class="radio"><label class="option"><input type="radio" name="invoice" value="不需要" required onchange="toggleInvoice(false)">不需要，開立一般發票</label><label class="option"><input type="radio" name="invoice" value="需要" onchange="toggleInvoice(true)">需要</label></div>
         <div id="invoiceBox" class="conditional">
           <div class="field"><label>發票抬頭</label><input id="invoiceTitle" type="text"></div>
-          <div class="field"><label>統一編號</label><input id="taxId" type="text" inputmode="numeric" maxlength="8"></div>
+          <div class="field"><label>統一編號</label><input id="taxId" type="text" inputmode="numeric" minlength="8" maxlength="8" pattern="[0-9]{8}" placeholder="請輸入 8 碼統一編號"></div>
         </div>
       </div>
 
@@ -204,6 +205,12 @@ const REGISTRATION_MODE='open'; // open｜last｜full
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwhooqZdeEguD6vnQXQlwCb6Zgqvnp4qHmgmu-g1IoAwLtTYw9qo2zE4tNEehzH71V_/exec';
 function toggleInvoice(show){document.getElementById('invoiceBox').style.display=show?'block':'none';}
 function toggleSensitivity(show){document.getElementById('sensitivityBox').style.display=show?'block':'none';}
+function taiwanToday(){
+  const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const get=type=>parts.find(part=>part.type===type).value;
+  return `${get('year')}-${get('month')}-${get('day')}`;
+}
+function setupPaymentDate(){document.getElementById('payDate').max=taiwanToday();}
 function checked(name){const x=document.querySelector(`input[name="${name}"]:checked`);return x?x.value:'';}
 function setupRegistrationMode(){
   if(REGISTRATION_MODE==='open') return;
@@ -260,7 +267,11 @@ async function sendForm(){
     return;
   }
   const invoice=checked('invoice'), sensitivity=checked('sensitivity');
-  if(invoice==='需要' && (!document.getElementById('invoiceTitle').value.trim() || !document.getElementById('taxId').value.trim())){err.textContent='請填寫發票抬頭與統一編號。';err.style.display='block';return;}
+  const payDate=document.getElementById('payDate').value;
+  if(!payDate || payDate>taiwanToday()){err.textContent='匯款日期不可晚於今天。';err.style.display='block';document.getElementById('payDate').focus();return;}
+  const taxId=document.getElementById('taxId').value.trim();
+  if(invoice==='需要' && !document.getElementById('invoiceTitle').value.trim()){err.textContent='請填寫發票抬頭。';err.style.display='block';return;}
+  if(invoice==='需要' && !/^\d{8}$/.test(taxId)){err.textContent='統一編號須為 8 碼數字。';err.style.display='block';document.getElementById('taxId').focus();return;}
   if(sensitivity==='有' && !document.getElementById('sensitivityNote').value.trim()){err.textContent='請簡單說明需要事先知道的氣味不適情況。';err.style.display='block';return;}
   const payload={
     timestamp:new Date().toLocaleString('zh-TW',{timeZone:'Asia/Taipei'}),
@@ -274,7 +285,7 @@ async function sendForm(){
     sensitivity,
     sensitivityNote:document.getElementById('sensitivityNote').value.trim(),
     transferLast5:document.getElementById('last5').value.trim(),
-    paymentDate:document.getElementById('payDate').value,
+    paymentDate:payDate,
     invoice,
     invoiceTitle:document.getElementById('invoiceTitle').value.trim(),
     taxId:document.getElementById('taxId').value.trim(),
@@ -291,6 +302,7 @@ async function sendForm(){
     window.scrollTo({top:0,behavior:'smooth'});
   }catch(e){btn.disabled=false;btn.textContent='送出報名';err.textContent='送出失敗，請稍後再試。';err.style.display='block';}
 }
+setupPaymentDate();
 setupRegistrationMode();
 </script>
 </body>
